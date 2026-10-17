@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-12T01:09:15.828612Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="etb-arch-14" name="Architecture ETB - 1.4">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Architecture fonctionnelle ETB — Exercice 1.4" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=28;fontStyle=1;fontColor=#17365D;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="40" y="25" width="1520" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="Corps papillon motorisé (Electronic Throttle Body) — une seule variante présente dans l’architecture : &lt;b&gt;54 mm OU 82 mm&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#44546A;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="150" y="72" width="1300" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="supply" value="&lt;b&gt;Alimentation véhicule&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Vehicle supply&lt;/span&gt;&lt;br&gt;&lt;b&gt;6 à 16 V&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#4472C4;strokeWidth=2;fillColor=#EAF2F8;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="55" y="180" width="235" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="pedal" value="&lt;b&gt;Pédale accélérateur&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Accelerator pedal&lt;/span&gt;&lt;br&gt;2 voies de position" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#4472C4;strokeWidth=2;fillColor=#EAF2F8;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="55" y="385" width="235" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="diag" value="&lt;b&gt;Diagnostic véhicule&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Vehicle diagnostics&lt;/span&gt;&lt;br&gt;Interface à définir&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;ex. CAN [HYP]&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#7F7F7F;strokeWidth=2;fillColor=#F2F2F2;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="55" y="640" width="235" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="ecu" value="&lt;b&gt;ECU moteur complet&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;font-weight:normal&quot;&gt;Engine ECU&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#17365D;strokeWidth=3;fillColor=#F7FAFE;arcSize=8;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#17365D;verticalAlign=top;spacingTop=16;" vertex="1" parent="1">
+          <mxGeometry x="365" y="135" width="590" height="610" as="geometry"/>
+        </mxCell>
+        <mxCell id="pwr" value="&lt;b&gt;Distribution VBAT + régulation 5 V&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Protection / alimentation logique &amp; capteurs&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#4472C4;strokeWidth=2;fillColor=#EAF2F8;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="415" y="195" width="490" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="logic" value="&lt;b&gt;Logique / ADC / diagnostic&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Boucle de position&lt;br&gt;ADC1 / ADC2&lt;br&gt;Plausibilité Poti1 / Poti2&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#5B6573;strokeWidth=2;fillColor=#FFFFFF;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="415" y="385" width="260" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="hbridge" value="&lt;b&gt;Pont en H&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;H-bridge motor driver&lt;br&gt;IN_A / IN_B / ENABLE&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#ED7D31;strokeWidth=2;fillColor=#FCE4D6;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="385" width="185" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="safety" value="&lt;b&gt;Fonction de sécurité&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Commande ↔ position • détection incohérence • désactivation contrôlée du driver&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#70AD47;strokeWidth=2;fillColor=#E2F0D9;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="415" y="610" width="490" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="etb" value="&lt;b&gt;ETB 54 mm OU 82 mm&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;font-weight:normal&quot;&gt;Electronic Throttle Body&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#17365D;strokeWidth=3;fillColor=#F7FAFE;arcSize=8;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#17365D;verticalAlign=top;spacingTop=16;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="135" width="500" height="610" as="geometry"/>
+        </mxCell>
+        <mxCell id="motor" value="&lt;b&gt;Moteur DC&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;DC motor&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#ED7D31;strokeWidth=2;fillColor=#FCE4D6;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="375" width="165" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="gear" value="&lt;b&gt;Réducteur&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Gear reduction&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#5B6573;strokeWidth=2;fillColor=#FFFFFF;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="525" width="165" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="throttle" value="&lt;b&gt;Papillon + ressort&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Throttle plate + return spring&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#5B6573;strokeWidth=2;fillColor=#FFFFFF;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="525" width="185" height="105" as="geometry"/>
+        </mxCell>
+        <mxCell id="sensors" value="&lt;b&gt;2 capteurs de position&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px&quot;&gt;Poti 1 / Poti 2&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px&quot;&gt;sorties analogiques opposées&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#70AD47;strokeWidth=2;fillColor=#E2F0D9;arcSize=10;fontFamily=Arial;fontSize=15;fontColor=#1F1F1F;align=center;verticalAlign=middle;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="315" width="185" height="135" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_supply" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#404040;strokeWidth=2;" edge="1" parent="1" source="supply" target="pwr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="228"/>
+              <mxPoint x="365" y="228"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_pedal" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4472C4;strokeWidth=2;" edge="1" parent="1" source="pedal" target="logic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="438"/>
+              <mxPoint x="365" y="438"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_diag" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=block;startFill=1;endArrow=block;endFill=1;strokeColor=#404040;strokeWidth=2;" edge="1" parent="1" source="diag" target="logic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="695"/>
+              <mxPoint x="345" y="695"/>
+              <mxPoint x="345" y="565"/>
+              <mxPoint x="415" y="565"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_logic_h" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#404040;strokeWidth=2;" edge="1" parent="1" source="logic" target="hbridge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="695" y="470"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_h_m1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#C00000;strokeWidth=2;" edge="1" parent="1" source="hbridge" target="motor">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="965" y="410"/>
+              <mxPoint x="1010" y="410"/>
+              <mxPoint x="1030" y="410"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_h_m2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4472C4;strokeWidth=2;" edge="1" parent="1" source="hbridge" target="motor">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="965" y="455"/>
+              <mxPoint x="1010" y="455"/>
+              <mxPoint x="1030" y="455"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_motor_gear" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#404040;strokeWidth=2;" edge="1" parent="1" source="motor" target="gear">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1162" y="500"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_gear_thr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#404040;strokeWidth=2;" edge="1" parent="1" source="gear" target="throttle">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="568"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_thr_sens" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#404040;strokeWidth=2;" edge="1" parent="1" source="throttle" target="sensors">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1378" y="500"/>
+              <mxPoint x="1378" y="470"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_poti1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4472C4;strokeWidth=2;" edge="1" parent="1" source="sensors" target="logic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="340"/>
+              <mxPoint x="990" y="340"/>
+              <mxPoint x="990" y="335"/>
+              <mxPoint x="630" y="335"/>
+              <mxPoint x="630" y="385"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_poti2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#4472C4;strokeWidth=2;" edge="1" parent="1" source="sensors" target="logic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="380"/>
+              <mxPoint x="970" y="380"/>
+              <mxPoint x="970" y="355"/>
+              <mxPoint x="585" y="355"/>
+              <mxPoint x="585" y="385"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_5v" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#70AD47;strokeWidth=2;" edge="1" parent="1" source="pwr" target="sensors">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="240"/>
+              <mxPoint x="1000" y="240"/>
+              <mxPoint x="1260" y="240"/>
+              <mxPoint x="1260" y="315"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_gnd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#70AD47;strokeWidth=2;" edge="1" parent="1" source="sensors" target="pwr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500" y="430"/>
+              <mxPoint x="1500" y="305"/>
+              <mxPoint x="940" y="305"/>
+              <mxPoint x="940" y="275"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_safety_logic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;strokeWidth=1.5;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="safety" target="logic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="545" y="590"/>
+              <mxPoint x="545" y="555"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_safety_h" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#7F7F7F;strokeWidth=1.5;dashed=1;dashPattern=6 4;" edge="1" parent="1" source="safety" target="hbridge">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="590"/>
+              <mxPoint x="810" y="555"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lab_supply" value="Énergie : &lt;b&gt;6–16 V&lt;/b&gt;&lt;br&gt;+ retour" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="292" y="185" width="120" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_pedal" value="Vp1, Vp2&lt;br&gt;2 voies" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="292" y="395" width="105" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_diag" value="Bidirectionnel&lt;br&gt;protocole à définir" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="292" y="640" width="120" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_cmd" value="Commandes logiques&lt;br&gt;PWM / IN_A / IN_B / ENABLE" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="665" y="438" width="60" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_motor1" value="&lt;b&gt;Motor +&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="950" y="382" width="75" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_motor2" value="&lt;b&gt;Motor −&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="950" y="442" width="75" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_5v" value="&lt;b&gt;Poti +&lt;/b&gt; : 5 ±0,2 V&lt;br&gt;1 fil" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="205" width="155" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_p1" value="&lt;b&gt;Poti 1 → ADC1&lt;/b&gt;&lt;br&gt;1 fil" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="905" y="300" width="150" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_p2" value="&lt;b&gt;Poti 2 → ADC2&lt;/b&gt;&lt;br&gt;1 fil" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="905" y="345" width="150" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_gnd" value="&lt;b&gt;Poti − / GND_SENS&lt;/b&gt;&lt;br&gt;référence capteur dédiée" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="275" width="200" height="42" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_mech" value="Transmission mécanique" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="490" width="150" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="lab_angle" value="Angle du papillon" style="text;html=1;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=13;fontColor=#333333;whiteSpace=wrap;fillColor=#FFFFFF;strokeColor=none;spacing=2;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="475" width="140" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="note_motor" value="&lt;b&gt;IMPORTANT :&lt;/b&gt; Motor − n’est &lt;b&gt;pas&lt;/b&gt; une masse. Motor + et Motor − sont les deux bornes du moteur commandées par le pont en H." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C9A227;strokeWidth=1.5;fillColor=#FFF2CC;arcSize=8;fontFamily=Arial;fontSize=13;fontColor=#5F4B00;align=left;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="365" y="775" width="565" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="note_hyp" value="&lt;b&gt;Traçabilité :&lt;/b&gt; les détails pédale et protocole diagnostic ne sont pas fournis par R1 ; ils restent à définir / [HYP]. Les seuils de diagnostic et performances du ressort sont à spécifier." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#C9A227;strokeWidth=1.5;fillColor=#FFF2CC;arcSize=8;fontFamily=Arial;fontSize=13;fontColor=#5F4B00;align=left;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="775" width="570" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="footer" value="Exercice 1.4 — architecture pédagogique • R1 p.1/p.3 + recueil • flux et interfaces explicités sans inventer de brochage ECU constructeur" style="text;html=1;align=left;verticalAlign=middle;fontFamily=Arial;fontSize=12;fontColor=#555555;whiteSpace=wrap;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="180" y="855" width="1240" height="25" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
